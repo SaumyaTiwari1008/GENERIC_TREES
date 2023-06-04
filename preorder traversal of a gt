@@ -1,0 +1,17 @@
+public static void traversals(Node node) //---PREORDER TRAVERSAL---
+{
+ System.out.println(node.data);
+ for(Node child:node.children)
+   {
+   traversals(child);
+   }
+ }  
+ 
+ public static void traversals(Node node)//---POSTORDER TRAVERSAL---
+ {
+   for(Node child:node.children)
+   {
+   traversals(child);
+   }
+  System.out.prinltn(node.data);
+ }
