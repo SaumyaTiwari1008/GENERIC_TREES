@@ -1,0 +1,8 @@
+public static void mirrorgt(Node node)
+{
+  for(Node node:node.children)
+  {  
+    mirrorgt(node);
+   }
+ Collections.reverse(node.children); //postorder euler call
+ }
