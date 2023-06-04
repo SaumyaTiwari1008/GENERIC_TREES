@@ -1,0 +1,13 @@
+public static void levo(Node node)
+{
+  Queue<Node> q=new ArrayDeque<>();
+  q.add(node);
+  
+ while(q)
+  {
+  System.out.println(node.data);
+  q.remove();
+  }
+  for(Nodde child:node.children)
+  q.add(child);
+}  
