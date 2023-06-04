@@ -1,0 +1,28 @@
+//---LEVEL ORER TRAVERSAL USING THE NULL MARKER----
+//basically we add null after each level and when we find null we add it back later after all the children have been accessed
+
+public static void Levelnull(Node node)
+{
+  Queue<Node> q=new ArrayDeque<>();
+  q.add(node);
+  q.add(null);
+  
+  while(q.size()>0)
+  {
+    if(q.remove()!=null)
+    {  
+   node=q.remove();
+   System.out.print(node.data);
+  for(Node child:node.children)
+  {
+    q.add(child);
+   }
+     }
+   else{
+     if(q.size()>0){
+     q.add(null);
+     System.out.println();
+     }
+ } 
+}
+}
