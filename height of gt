@@ -1,0 +1,14 @@
+//form a gt first using the constructor
+
+public static int heightgt(Node node)
+{
+int ht=-1;
+  for(Node children:node.children)
+  {
+    int ch=heightgt(children);
+    ht=max(ht,ch);
+    }
+    ht++;
+    
+    return ht;
+ }   
