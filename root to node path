@@ -1,0 +1,24 @@
+public static ArrayList<Integer> path(Node node,int t)
+{
+  if(node.data==t)
+   {
+     ArrayList<Integer> a=new ArrayList<>();
+     a.add(node.data);
+     return a;
+   }
+   
+    
+   for(Node child:node.children)
+   { 
+      ArrayList<Integer> l=path(child,t);
+      if(l.size()>0)
+      {
+          l.add(child.data);
+          return l;
+      }
+     
+   }
+   return new ArrayList<>();
+ } 
+ 
+ // make another Arraylist in main function
