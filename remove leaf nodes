@@ -1,0 +1,16 @@
+public static void RemoveLeaf(Node node)
+{ 
+
+for(int i=node.children.size()-1;i>=0;i--)  //to remove without escaping
+   {
+     Node child=node.children.get(i);
+     if(child.children.size()==0)
+      node.children.remove(child);
+  }
+  for(Node child:node.children)  //to reach the last nodes 
+  { 
+    RemoveLeaf(child);
+   }
+   
+   
+}  
