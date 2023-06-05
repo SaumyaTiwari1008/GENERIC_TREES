@@ -1,0 +1,26 @@
+// we have to print  the generic tree such that all nodes come one after the other
+
+public static void linearize1(Node node)
+{
+  for(Node child:node.children)
+  {
+    linearize1(child);
+  }
+  while(node.children.size()>1)
+  {
+  Node lc,slc,tail;
+  lc=node.children.remove(node.children.size()-1);
+  slc=node.children.get(node.children.size()-1);
+  tail=gettail(slc);
+  }
+ }
+private static Node gettail(Node node){
+  while(node.children.size()==1)
+  {
+   node=node.children.get(0);
+  }
+  return node;
+  
+ }
+ 
+  
