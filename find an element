@@ -1,0 +1,17 @@
+
+    //In thus we would search the given target in the array and would return true or false accordingly
+    public static boolean find(Node node,int t)
+{
+  if(node.data==t)
+   return true;
+   
+   for(Node child:node.children)
+   {  
+    boolean f= find(child,t);
+    if(f)
+    return true;
+   }
+   return false;
+ } 
+}
+ 
