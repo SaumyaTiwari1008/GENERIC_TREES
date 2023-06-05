@@ -1,0 +1,16 @@
+ public static Node linearize(Node node) {
+
+    if (node.children.size() == 0)
+    {
+      return node;
+    }
+    Node lkt = linearize(node.children.get(node.children.size() - 1));
+    while (node.children.size() > 1)
+    {
+      Node last = node.children.remove(node.children.size() - 1);
+      Node sl = node.children.get(node.children.size() - 1);
+      Node slt = linearize(sl);
+      slt.children.add(last);
+    }
+    return lkt;
+  }
