@@ -1,4 +1,5 @@
 //---Data does not matter---
+// check if they are mirror
 
 public static boolean mirror(Node n,Node m)
 { 
