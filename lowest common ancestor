@@ -1,0 +1,20 @@
+public static int common(Node root,int a,int b)
+{
+  ArrayList <Integer> p1=path(root,a);
+  ArrayList<Integer> p2=path(root,b);
+  
+  int i,j;
+  i=p1.size()-1;
+  j=p2.size()-1;
+  int x,y;
+  while(i>=0 && j>=0 && p1.get(i)==p2.get(j))
+  {
+    i--;j--;
+   }
+  i++;
+  j++;
+  return p1.get(i);
+  
+  }
+    
+    
