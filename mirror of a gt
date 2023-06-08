@@ -1,0 +1,17 @@
+//---Data does not matter---
+
+public static boolean mirror(Node n,Node m)
+{ 
+  if(n.children.size()!=m.children.size())
+  return false;
+   for(int i=0;i<n.children.size();i++)
+   {
+   int j=n.children.size()-1-i;
+     Node c=n.children.get(i);
+     Node d=m.children.get(j);
+     if(mirror(c,d)==false)
+     return false;
+    }
+  return true;
+ } 
+     
