@@ -1,0 +1,20 @@
+//Are trees similiar in shape
+// no of children is same
+//30===c
+
+public static boolean similiar(Noe node1,Node node2)
+{
+if(node1.children.size()!=node2.children.size())
+ {
+  return false;
+  }
+  for(int i=0;i<node1.children.size();i++)
+  {
+   Node n1=node1.children.get(i);
+   Node n2=node2.children.get(i);
+     if(simliar(n1,n2)==false)
+     return false;
+   }
+  return true;
+ } 
+   
