@@ -1,0 +1,17 @@
+  static int mSum = Integer.MIN_VALUE;
+  static int mSumNode = Integer.MIN_VALUE;
+  public static int nodeWithMaximumSubtreeSum(Node node) {
+    int sum = node.data;
+
+    for (Node child : node.children) {
+      int cstSum = nodeWithMaximumSubtreeSum(child);
+      sum += cstSum;
+    }
+
+    if (sum > mSum) {
+      mSum = sum;
+      mSumNode = node.data;
+    }
+
+    return sum;
+  }
