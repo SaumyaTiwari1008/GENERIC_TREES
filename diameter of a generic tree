@@ -1,0 +1,24 @@
+static int dia=0;
+static int calcdiaretheight(Node node)
+{
+int ht=-1;
+int shc=-1;
+for(Node child:node.children)
+{ 
+ int ch= calcdiaretheight(child);
+ if(ch>=ht){
+ shc=ht;
+ ht=ch;
+ 
+  }
+  else if(ch>=shc)
+  shc=ch;
+  }
+  
+  if( shc+ch+2 >dia)
+  dia=shc+ht+2 ;
+  ht+=1;
+  return ht;
+ } 
+  
+//later print dia in main
